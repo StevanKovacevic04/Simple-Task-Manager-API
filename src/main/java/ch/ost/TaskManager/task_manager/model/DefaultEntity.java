@@ -7,6 +7,7 @@ import lombok.Setter;
 
 @Entity
 @Getter
+@Setter
 @MappedSuperclass
 public abstract class DefaultEntity {
 
