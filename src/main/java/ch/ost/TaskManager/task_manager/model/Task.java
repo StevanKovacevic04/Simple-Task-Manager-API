@@ -1,7 +1,5 @@
 package ch.ost.TaskManager.task_manager.model;
 
-import ch.ost.TaskManager.task_manager.enumeration.Priority;
-import ch.ost.TaskManager.task_manager.enumeration.Status;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,4 +27,11 @@ public class Task extends DefaultEntity{
     @JoinColumn(name = "user_id")
     private User user;
 
+    public enum Priority {
+        LOW, MEDIUM, HIGH
+    }
+
+    public enum Status {
+        PENDING, IN_PROGRESS, DONE
+    }
 }
